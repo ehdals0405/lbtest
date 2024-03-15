@@ -14,7 +14,7 @@ public class IndexController {
     public String index(Model model) throws UnknownHostException {
         InetAddress ipAddress = InetAddress.getLocalHost();
 
-        model.addAttribute("ip", ipAddress.getHostAddress());
+        model.addAttribute("ip", ipAddress.getAddress());
         return "index";
     }
 }
